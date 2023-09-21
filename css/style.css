@@ -20,6 +20,7 @@
 body {
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
@@ -35,6 +36,7 @@ body {
   gap: 0.9rem;
 
   background-color: var(--Dark-Blue);
+
   color: var(--Medium-Grey);
 
   padding: 1rem 2rem;
@@ -42,7 +44,7 @@ body {
   border-radius: 20px;
 }
 
-.card .star-icon {
+.card__image {
   background-color: hsla(216, 12%, 8%, 0.4);
   color: var(--Light-Grey);
   width: 40px;
@@ -54,40 +56,36 @@ body {
   align-items: center;
 }
 
-.card h1 {
+.card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card__content h1 {
   color: var(--White);
 }
 
-.card form {
-  display: grid;
-  gap: 20px;
-}
-
-.card .rate {
+.card__content .rate {
   display: flex;
-  gap: 20px;
-}
-
-.rate div {
-  background-color: hsla(216, 12%, 8%, 0.4);
-  color: var(--Light-Grey);
-  width: 40px;
-  aspect-ratio: 1;
-  border-radius: 50%;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
+  justify-content: space-between;
   cursor: pointer;
 }
 
-.rate div:hover {
+.card__content .rate button {
+  background-color: hsla(216, 12%, 8%, 0.4);
+  color: var(--Light-Grey);
+
+  width: 40px;
+  aspect-ratio: 1;
+}
+
+.card__content .rate button:hover {
   background-color: var(--Orange);
   color: var(--White);
 }
 
-.card button {
+.card__content button {
   text-transform: uppercase;
   background-color: var(--Orange);
   color: var(--White);
@@ -97,7 +95,40 @@ body {
   cursor: pointer;
 }
 
-.card button:hover {
+.card__content button:hover {
   background-color: var(--White);
+  color: var(--Orange);
+}
+
+.card__2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.card__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.card__content h2 {
+  color: var(--White);
+}
+
+.card__user-rate {
+  background-color: var(--Dark-Blue);
+  padding: 5px 20px;
+  border-radius: 20px;
+}
+
+.card__user-rate p {
   color: var(--Orange);
 }
